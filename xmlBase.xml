@@ -1,0 +1,178 @@
+﻿<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <teiHeader>
+            <fileDesc>
+                  <titleStmt>
+                        <title>Blanche-Neige</title>
+                        <author>Anonyme</author>
+                        <editor><!-- éditeur scientifique --></editor>
+                        <respStmt>
+                              <resp>Encodage réalisé dans le cadre d'un exercice du Open
+                                    Acess</resp>
+                              <persName>
+                                    <forename>Ariane</forename>
+                                    <surname>Pinche</surname>
+                              </persName>
+                        </respStmt>
+                  </titleStmt>
+                  <publicationStmt>
+                        <!-- <p>Publication Information</p> 
+                         On peut également proposer un encodage avec un balisage spécifique -->
+                        <publisher><!-- information sur la maison d'édition--></publisher>
+                        <date/>
+                        <distributor><!-- Entité responsable de la diffusion de l'oeuvre --></distributor>
+                        <availability>
+                              <licence
+                                    target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr"
+                                    >Licence Creative Commons Attribution-partage dans les mêmes
+                                    conditions</licence>
+                        </availability>
+                  </publicationStmt>
+                  <sourceDesc>
+                        <msDesc xml:id="A">
+                              <msIdentifier>
+                                    <country>France</country>
+                                    <settlement>Paris</settlement>
+                                    <!-- institution chargée de la conservation du manuscrit -->
+                                    <repository>Bibliotheque nationale de France</repository>
+                                    <!-- lieu de conservation -->
+                                    <idno>ms. fr. 007</idno>
+                                    <!-- côte du manuscrit -->
+                                    <altIdentifier>
+                                          <!-- ancienne côte du manuscrit -->
+                                          <idno/>
+                                    </altIdentifier>
+                              </msIdentifier>
+                              <head>
+                                    <title/><!-- nom présent dans la notice --><origDate
+                                          notAfter="1100" notBefore="0900"/></head>
+                              <msContents>
+                                    <msItemStruct>
+                                          <locus/>
+                                          <!-- feuillets occupés par le texte -->
+                                          <author/>
+                                          <title/>
+                                          <incipit/>
+                                          <explicit/>
+                                    </msItemStruct>
+                              </msContents>
+                              <physDesc>
+                                    <objectDesc>
+                                          <!-- description du codex -->
+                                          <supportDesc>
+                                                <!-- description des matériaux et marque -->
+                                                <support><watermark><!-- si présence de filigranes --></watermark></support>
+                                                <extent><!-- dimension --><width unit="mm"/><height
+                                                  unit="mm"/></extent>
+                                                <foliation/>
+                                                <!-- système d'enchainement des folios dans le manuscrit -->
+                                                <condition/>
+                                                <!-- état du manuscrit -->
+                                          </supportDesc>
+                                          <layoutDesc>
+                                                <!-- description de la mise en page -->
+                                                <layout columns="1" writtenLines="23"/>
+                                          </layoutDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                          <handNote xml:id="Cglos">Glosateur</handNote>
+                                          <!-- description des différentes mains avec attribution d'un xml:id à chacune des mains-->
+                                    </handDesc>
+                                    <scriptDesc>
+                                          <!-- description de l'écriture -->
+                                          <scriptNote/>
+                                          <scriptNote/>
+                                    </scriptDesc>
+                                    <decoDesc>
+                                          <!--  description des enluminures -->
+                                          <decoNote/>
+                                          <decoNote/>
+                                    </decoDesc>
+                              </physDesc>
+                              <history>
+                                    <!-- histoire du manuscrit -->
+                                    <origin>Monastère de saint Amant</origin>
+                                    <!-- lieu de copie -->
+                                    <provenance><!-- anciens lieux de conservation --><p/></provenance>
+                              </history>
+                        </msDesc>
+                        <!-- proposition alternative, plus synthétique pour faire la liste des témoins d'une édition -->
+                        <listWit>
+                              <witness xml:id="B">Paris, Bibliothèque Mazarine, 0102</witness>
+                              <witness xml:id="C">Cambrai, Bibliothèque municipale, 0812</witness>
+                        </listWit>
+                  </sourceDesc>
+            </fileDesc>
+            <encodingDesc>
+                  <!-- informations sur la méthode de balisage employée -->
+                  <variantEncoding method="parallel-segmentation" location="internal"/>
+            </encodingDesc>
+            <profileDesc>
+                  <particDesc>
+                        <!-- permet de signaler les voix qui participent au récit -->
+                        <listPerson>
+                              <person xml:id="blancheNeige">
+                                    <persName>Blanche Neige</persName>
+                                    <note>Princesse, piégée par une pomme empoisonnée et sauvée par
+                                          un nain charmant.</note>
+                              </person>
+                              <person xml:id="nainCharmant">
+                                    <persName>Charmant</persName>
+                                    <note>Nain qui sauva Blanche-Neige.</note>
+                              </person>
+                              <!-- ... -->
+                        </listPerson>
+                  </particDesc>
+                  <settingDesc>
+                        <!-- permet de décrire les lieux en lien avec le récit  -->
+                        <listPlace>
+                              <place xml:id="forêt">
+                                    <placeName>Forêt enchantée</placeName>
+                                    <note>Lieu où Blanche-neige trouva refuge</note>
+                              </place>
+                              <place xml:id="chateau">
+                                    <placeName>Château enchanté</placeName>
+                                    <note>Lieu où habite la belle mère de Blanche-neige</note>
+                              </place>
+                              <!-- ... -->
+                        </listPlace>
+                  </settingDesc>
+            </profileDesc>
+      </teiHeader>
+      <text>
+            <body>
+                  <div type="chapter" n="1">
+                        <head>Blanche-Neige mange la pomme empoisonnée</head>
+                        <p><placeName ref="#chateau">Château</placeName> ipsum <persName
+                                    ref="#blancheNeige">Blanche-Neige</persName> sit amet,
+                              consectetur adipiscing elit. Duis rhoncus erat a orci bibendum
+                              eleifend. Nullam gravida velit non magna fermentum sagittis.
+                                    <placeName ref="#forêt">Forêt enchantée </placeName>justo,
+                              maximus sit amet rutrum vel, sodales vel enim. Vestibulum odio odio,
+                              fringilla molestie quam sit amet, convallis tristique dui. Mauris
+                              gravida facilisis turpis, et porttitor diam <app>
+                                    <lem wit="#B">sagittis</lem>
+                                    <rdg wit="#A">sagittos</rdg>
+                                    <rdg wit="#C">sagittes</rdg>
+                              </app> sed. Donec hendrerit semper dui, vel consequat erat. Vivamus
+                              bibendum convallis vehicula. Sed vehicula id sapien et maximus.
+                              Maecenas accumsan eu elit a tempor.</p>
+                  </div>
+                  <div type="chapter" n="2">
+                        <head>Blanche-Neige attend le nain Charmant</head>
+                        <p>Sed at erat tincidunt purus commodo vestibulum ac nec justo. Maecenas a
+                              justo arcu. <app>
+                                    <lem wit="#A #B">Etiam</lem>
+                                    <rdg wit="#C"/>
+                              </app> ac malesuada odio, eu venenatis velit. Nullam gravida ligula
+                              vel nisi cursus, et malesuada erat cursus. Donec convallis <persName
+                                    ref="#nainCharmant">Charmant</persName> rutrum nunc consequat,
+                              in commodo mi semper. In luctus odio ac purus viverra, non tincidunt
+                              ligula iaculis. Nulla vehicula fermentum mollis. Aliquam erat
+                              volutpat. Integer eu egestas magna. Donec laoreet efficitur purus ac
+                              molestie.</p>
+                  </div>
+            </body>
+      </text>
+</TEI>

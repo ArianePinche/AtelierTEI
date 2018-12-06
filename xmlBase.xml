@@ -1,4 +1,6 @@
-﻿<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
       <teiHeader>
@@ -17,10 +19,15 @@
                         </respStmt>
                   </titleStmt>
                   <publicationStmt>
+                        
                         <!-- <p>Publication Information</p> 
                          On peut également proposer un encodage avec un balisage spécifique -->
-                        <publisher><!-- information sur la maison d'édition--></publisher>
+                        <publisher><!-- information sur la maison d'édition-->
+                              <ref target="abc">ref</ref>
+                        </publisher>
+                        
                         <date/>
+                        
                         <distributor><!-- Entité responsable de la diffusion de l'oeuvre --></distributor>
                         <availability>
                               <licence
@@ -28,8 +35,10 @@
                                     >Licence Creative Commons Attribution-partage dans les mêmes
                                     conditions</licence>
                         </availability>
+                        
                   </publicationStmt>
                   <sourceDesc>
+                        
                         <msDesc xml:id="A">
                               <msIdentifier>
                                     <country>France</country>
@@ -94,7 +103,14 @@
                                     <!-- histoire du manuscrit -->
                                     <origin>Monastère de saint Amant</origin>
                                     <!-- lieu de copie -->
-                                    <provenance><!-- anciens lieux de conservation --><p/></provenance>
+                                    <provenance><!-- anciens lieux de conservation --><p/>
+                                    <listBibl>
+                                          <bibl>
+                                               
+                                          </bibl>
+                                    </listBibl>
+                                    </provenance>
+                                    
                               </history>
                         </msDesc>
                         <!-- proposition alternative, plus synthétique pour faire la liste des témoins d'une édition -->
@@ -129,7 +145,10 @@
                         <listPlace>
                               <place xml:id="forêt">
                                     <placeName>Forêt enchantée</placeName>
+                                    
+         
                                     <note>Lieu où Blanche-neige trouva refuge</note>
+                                    
                               </place>
                               <place xml:id="chateau">
                                     <placeName>Château enchanté</placeName>

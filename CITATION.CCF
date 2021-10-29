@@ -4,6 +4,8 @@ authors:
   - family-names: Pinche
     given-names: Ariane
     orcid: https://orcid.org/0000-0002-7843-5050
+    - family-names: Orsini
+    given-names: Sarah
 title: "Atelier TEI"
 date-released: 2018-12-06
 url: "https://github.com/ArianePinche/AtelierTEI"
